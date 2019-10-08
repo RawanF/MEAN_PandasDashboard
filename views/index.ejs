@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <title>Pandas Dashboard</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        
+        <h1>Here are the awesome Pandas:<button onclick="window.location.href='/pandas/new'" class="btn">Add New Panda</button> </h1>
+       <br><br>
+            <% if (pandas.length==0) { %>
+                <h3 style="color: gray;">No Pandas in the database</h3>
+            <% }else{ for (var p of pandas) { %>
+            <h3 style="color: gray;">Panda Name:<%= p.name %></h3>
+            <button onclick="window.location.href='/pandas/<%= p._id %>'" class="btn">View <%= p.name %>'s Profile </button>
+            <hr>
+            <% } }%>
+        
+    </div>
+</body>
+
+</html>
