@@ -13,7 +13,7 @@
     <div id="wrapper">
         <h1>Edit <%=panda.name%></h1>
         <div id="contant">
-            <form  action="/pandas/?id=<%= panda._id %>" method="POST" id="form">
+            <form  action="/editPanda/<%= panda._id %>" method="POST" id="form">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" name="name" class="form-control" value="<%=panda.name%>"  placeholder="Panda name"
